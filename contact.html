@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta anme="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Renewed Store | ecommerce website</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    </head>
+    <body>
+        <div class="header">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <a href="index.html"></a><img src="images/logo2.png" width="125px">
+                    </div>
+                    <nav>
+                        <ul id="menuitems">
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="products.html">PRODUCTS</a></li>
+                            <li><a class="active" href="contact.html">CONTACT</a></li>
+                            <li><a href="about.html">LEADERSHIP</a></li>
+                            <li><a href="account.html">ACCOUNT</a></li>
+                        </ul>
+                    </nav>
+                    <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+                    <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+                </div>
+                <div class="contact-section">
+                    <h5><u>Contact Us</u></h5>
+                    <form class="contact-form" onclick="myFunction()" method="post">
+                        <input type="text" class="contact-form-text" name="name" placeholder="Your name">
+                        <input type="Email" class="contact-form-text" name="email" placeholder="Your Email">
+                        <input type="text" class="contact-form-text" name="phone" placeholder="Your phone">
+                        <textarea class="contact-form-text" name="message" placeholder="Your message"></textarea>
+                        <input type="Submit" class="contact-form-btn" value="Submit" name="btn"> 
+                      <!--  <button onclick="myFunction()"> Submit </button> -->
+                    </form>
+                    <script>
+                       function myFunction(){
+                       alert("Your detial is Submited!");
+                       }
+                    </script>
+                    
+                </div>
+            </div>
+            
+        </div>
+
+
+        <!----------footer-------->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download Our app</h3>
+                        <p>Download our app for android and ios mobile</p>
+                        <div class="app-logo">
+                            <img src="images/play-store.png">
+                            <img src="images/app-store.png">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="images/r1.jpg">
+                        <p>Our purpose is to sustainability make the pleasure and benefits of technologies</p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li>coupons</li>
+                            <li>Blog Posts</li>
+                            <li>Return policy</li>
+                            <li>join affiliate</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="footer-col-4">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>instagram</li>
+                            <li>You Tube</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!----------j script for toggle menu-------->
+        <script>
+            var menuitems = document.getElementById("menuitems");
+            menuitems.style.maxHeight = "0px";
+
+            function menutoggle()
+            {
+                if(menuitems.style.maxHeight == "0px")
+                {
+                    menuitems.style.maxHeight = "200px";
+                }
+                else
+                {
+                    menuitems.style.maxHeight = "0px";
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta anme="viewport" content="width-device-width, initial-scale=1.0">
+        <title>All Products-Renewed Store</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+
+ <style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+
+    </head>
+    <body>
+<!------------------------------- top button --------------------------->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+
+        <div class="header">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <img src="images/logo2.png" width="125px">
+                    </div>
+                    <nav>
+                        <ul id="menuitems">
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a class="active" href="products.html">PRODUCTS</a></li>
+                            <li><a href="contact.html">CONTACT</a></li>
+                            <li><a href="about.html">LEADERSHIP</a></li>
+                            <li><a href="account.html">ACCOUNT</a></li>
+
+                        </ul>
+                    </nav>
+                    <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+                    <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+                </div>
+            </div>
+        </div>
+        <!------all categories-------->
+        <div class="small-container">
+            <div class="row row-2">
+                <h2>All- Products</h2>
+                <select>
+                    <option>Defaut Sorting</option>
+                    <option>Sort By Price</option>
+                    <option>Sort By Popularity</option>
+                    <option>Sort By Sale</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <div class="col-4">
+                    <a href="product_details.html"><img src="images/laptop_1_1.jpg"></a>
+                    <a href="product_details.html"><h4>Hp laptop-15(2018)</h4></a>
+                    <p>Rs. 35000</p>
+                </div>
+                <div class="col-4">
+                    <a href="https://www.amazon.in/s?k=IQOO-5+Gaming-+Edition&ref=nb_sb_noss">
+                    <img src="images/mobile_1_1.jpg">
+                    <h4>IQOO-5 Gaming- Edition</h4></a>
+                    <p>Rs. 30000</p>
+                </div>
+                <div class="col-4">
+                    <a href="https://www.amazon.in/s?k=gogals&ref=nb_sb_noss_1">
+                    <img src="https://m.media-amazon.com/images/I/71Z+nmNrLZL._AC_UL320_.jpg">
+                    <h4>Gogals</h4></a>
+                    <p>Rs. 546</p>
+                </div>
+                <div class="col-4">
+                    <a href="https://www.amazon.in/s?k=Led&ref=nb_sb_noss_2">
+                    <img src="https://m.media-amazon.com/images/I/81t2A6uhm4L._AC_UY218_.jpg">
+                    <h4>LED TV 32DJ (Black)</h4></a>
+                    <p>Rs. 10,999</p>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-4">
+                    <a href="https://www.amazon.in/s?k=Pro-Audio+Speakers&ref=nb_sb_noss">
+                    <img src="images/sepaker_2_1.jpg">
+                    <h4>Pro-Audio Speakers</h4></a>
+                    <p>Rs. 7000</p>
+                </div>
+                <div class="col-4">
+                    <a href="https://www.amazon.in/s?k=watch&crid=4Y290V4XCUKX&sprefix=Wa%2Caps%2C515&ref=nb_sb_ss_midas-iss-sm_3_2">
+                    <img src="https://m.media-amazon.com/images/I/71BhVdRWIaL._AC_UL320_.jpg">
+                    <h4>Luminox Watch-XS.3517.L</h4></a>
+                    <p>Rs. 1500</p>
+                </div>
+                <div class="col-4">
+                    <a href="https://www.amazon.in/s?k=Apple+11+pro+max&ref=nb_sb_noss_2">
+                    <img src="images/mobile_2_1.jpg">
+                    <h4>Apple 11 pro max</h4></a>
+                    <p>Rs. 58000</p>
+                </div>
+                <div class="col-4">
+                    <a href="https://www.amazon.in/s?k=Logitech+gaming+Mouse&ref=nb_sb_noss_2">
+                    <img src="images/mouse_1_1.jpg">
+                    <h4>Logitech gaming Mouse</h4></a>
+                    <p>Rs.1200</p>
+                </div>
+            </div>
+
+
+           <div class="row">
+                <div class="col-4">
+                    <a href="https://www.amazon.in/s?k=shoes&crid=2F9CO6DUU1OUE&sprefix=Sho%2Caps%2C518&ref=nb_sb_ss_midas-iss-sm_1_3">
+                    <img src="https://m.media-amazon.com/images/I/61yoQ3NEwgL._AC_UL320_.jpg">
+                    <h4>Shoes</h4></a>
+                </div>
+                <div class="col-4">
+                    <a href="https://www.amazon.in/s?k=shirt+jeans&crid=1RE68UAQBN99T&sprefix=shert%2Caps%2C399&ref=nb_sb_ss_midas-iss-sm_3_5">
+                    <img src="https://m.media-amazon.com/images/I/61hyrAJ8-bL._AC_UL320_.jpg">
+                    <h4>Branded Shirt </h4></a>
+                </div>
+                <div class="col-4">
+                    <a href="https://www.amazon.in/s?k=electronic+toys+for+kids&crid=1GEPOELXE1UV8&sprefix=electronic+toys%2Caps%2C592&ref=nb_sb_ss_midas-iss-sm_1_15">
+                    <img src="https://m.media-amazon.com/images/I/61q8uJe2M3L._AC_UL320_.jpg">
+                    <h4>Toys for Kids</h4></a>
+                </div>
+                <div class="col-4">
+                    <a href="https://www.amazon.in/s?k=blazers+for+men+stylish&crid=1YPAD707YY98G&sprefix=blazer%2Caps%2C479&ref=nb_sb_ss_midas-iss-sm_3_6">
+                    <img src="https://m.media-amazon.com/images/I/5182Hqm-OHL._AC_UL320_.jpg">
+                    <h4>Blazer for Men </h4></a>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-4">
+                    <a href="https://www.amazon.in/s?k=laptop&crid=2S9ERYQKJY93E&sprefix=lap%2Caps%2C388&ref=nb_sb_ss_midas-iss-sm_1_3">
+                    <img src="images/laptop_category.jpg">
+                    <h4>Laptops</h4></a>
+                </div>
+                <div class="col-4">
+                    <a href="https://www.amazon.in/s?k=Sunglasses&ref=nb_sb_noss">
+                    <img src="https://m.media-amazon.com/images/I/51a-j5MiJkL._AC_UL320_.jpg">
+                    <h4>Sunglasses</h4></a>
+                </div>
+                <div class="col-4">
+                    <a href="https://www.amazon.in/s?k=watch+for+women&crid=V0BAZ82HFKC7&sprefix=watch+for+w%2Caps%2C467&ref=nb_sb_ss_midas-iss-sm_1_11">
+                    <img src="https://m.media-amazon.com/images/I/51va8RYRDeS._AC_UL320_.jpg">
+                    <h4>Watch for Women's</h4></a>
+                </div>
+                <div class="col-4">
+                    <a href="https://www.amazon.in/s?k=mouse+and+keyboard+pad&crid=1YW85VLAJVYVC&sprefix=mouse%2Caps%2C769&ref=nb_sb_ss_midas-iss-sm_9_5">
+                    <img src="https://m.media-amazon.com/images/I/41q1rG2qVqL._AC_UL320_.jpg">
+                    <h4>Mouse and Keyboards Pad</h4></a>
+                </div>
+            </div>
+
+            <div class="page-btn">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>Next</span>
+
+            </div>
+
+        </div>
+
+
+        <!----------footer-------->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download Our app</h3>
+                        <p>Download our app for android and ios mobile</p>
+                        <div class="app-logo">
+                            <img src="images/play-store.png">
+                            <img src="images/app-store.png">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="images/r1.jpg">
+                        <p>Our purpose is to sustainability make the pleasure and benefits of technologies</p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li>coupons</li>
+                            <li>Blog Posts</li>
+                            <li>Return policy</li>
+                            <li>join affiliate</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="footer-col-4">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>instagram</li>
+                            <li>You Tube</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!----------j script for toggle menu-------->
+        <script>
+            var menuitems = document.getElementById("menuitems");
+            menuitems.style.maxHeight = "0px";
+
+            function menutoggle()
+            {
+                if(menuitems.style.maxHeight == "0px")
+                {
+                    menuitems.style.maxHeight = "200px";
+                }
+                else
+                {
+                    menuitems.style.maxHeight = "0px";
+                }
+            }
+        </script>
+
+<!--------------------------------- Top button ------------------------->
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta anme="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Products Details-Renewed Store</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    
+<style>
+* {box-sizing: border-box;}
+
+.img-magnifier-container {
+  position:relative;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 3px solid #000;
+  border-radius: 50%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 100px;
+  height: 100px;
+}
+</style>
+<script>
+function magnify(imgID, zoom) {
+  var img, glass, w, h, bw;
+  img = document.getElementById(imgID);
+  /*create magnifier glass:*/
+  glass = document.createElement("DIV");
+  glass.setAttribute("class", "img-magnifier-glass");
+  /*insert magnifier glass:*/
+  img.parentElement.insertBefore(glass, img);
+  /*set background properties for the magnifier glass:*/
+  glass.style.backgroundImage = "url('" + img.src + "')";
+  glass.style.backgroundRepeat = "no-repeat";
+  glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+  bw = 3;
+  w = glass.offsetWidth / 2;
+  h = glass.offsetHeight / 2;
+  /*execute a function when someone moves the magnifier glass over the image:*/
+  glass.addEventListener("mousemove", moveMagnifier);
+  img.addEventListener("mousemove", moveMagnifier);
+  /*and also for touch screens:*/
+  glass.addEventListener("touchmove", moveMagnifier);
+  img.addEventListener("touchmove", moveMagnifier);
+  function moveMagnifier(e) {
+    var pos, x, y;
+    /*prevent any other actions that may occur when moving over the image*/
+    e.preventDefault();
+    /*get the cursor's x and y positions:*/
+    pos = getCursorPos(e);
+    x = pos.x;
+    y = pos.y;
+    /*prevent the magnifier glass from being positioned outside the image:*/
+    if (x > img.width - (w / zoom)) {x = img.width - (w / zoom);}
+    if (x < w / zoom) {x = w / zoom;}
+    if (y > img.height - (h / zoom)) {y = img.height - (h / zoom);}
+    if (y < h / zoom) {y = h / zoom;}
+    /*set the position of the magnifier glass:*/
+    glass.style.left = (x - w) + "px";
+    glass.style.top = (y - h) + "px";
+    /*display what the magnifier glass "sees":*/
+    glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+  }
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    /*get the x and y positions of the image:*/
+    a = img.getBoundingClientRect();
+    /*calculate the cursor's x and y coordinates, relative to the image:*/
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    /*consider any page scrolling:*/
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+</script>
+   </head>
+    <body>
+        <div class="header">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <img src="images/logo2.png" width="125px">
+                    </div>
+                    <nav>
+                        <ul id="menuitems">
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a class="active" href="products.html">PRODUCTS</a></li>
+                            <li><a href="contact.html">CONTACT</a></li>
+                            <li><a href="about.html">LEADERSHIP</a></li>
+                            <li><a href="account.html">ACCOUNT</a></li>
+                        </ul>
+                    </nav>
+                    <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+                    <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+                </div>
+            </div>
+        </div>
+
+        <!-----------single product details------->
+        <div class="small-container single-product">
+            <div class="row">
+                <div class="col-2">
+                  <div class="img-magnifier-container">
+                    <img id="myimage" src="images/laptop_1_1.jpg" width="500px" height="600px" id="productimg">
+                  </div>         
+ 
+                    <div class="small-img-row">
+                        <div class="small-img-col">
+                            <img src="images/laptop_1_1.jpg" width="70%" class="small-img">
+                        </div>
+                        <div class="small-img-col">
+                            <img src="images/laptop_p_d1.jpg" width="70%" class="small-img">
+                        </div>
+                        <div class="small-img-col">
+                            <img src="images/laptop_p_d_2.jpg" width="70%" class="small-img">
+                        </div>
+                        <div class="small-img-col">
+                            <img src="images/laptop_p_d_3.png" width="70%" class="small-img">
+                        </div>
+                    </div>
+                </div>
+
+<script>
+/* Initiate Magnify Function
+with the id of the image, and the strength of the magnifier glass:*/
+magnify("myimage", 3);
+</script>
+
+                <div class="col-2">
+                    <p>HOME /HP laptop-15</p>
+                    <h1>HP Laptop - 15</h1>
+                    <h4>Rs. 35000</h4>
+
+                    
+                    <input type="number" value="1">
+                    <a href="cart.html" class="btn">Add To Cart</a>
+                    <h3>Product Details</h3>
+                    <p>1) Processor: AMD Ryzen 3 3250U (2.6 GHz base clock, up to 3.5 GHz max boost clock, 4 MB L3 cache, 2 cores)<br> <br> 
+                        2) Operating System & Preinstalled Software: Windows 10 Home<br> <br> 
+                        3) Display: 15.6-inch FHD (1920 x 1080), IPS, micro-edge, anti-glare, 250 nits, 45% NTSC<br> <br> 
+                        4) Memory & Storage: 8 GB DDR4-2400 SDRAM (1 x 8 GB), Upgradable to 16 GB | 1TB HDD 5400 RPM<br> <br>  
+                        6)Design & Battery: Thin and light design | Laptop weight: 1.76 kg | Upto 12 hours of Battery life, 3-cell, 41 Wh Li-ion Fast Charge Battery<br> <br> 
+                        7) Warranty: This genuine HP laptop comes with 1-year domestic warranty from HP.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!----------title-------->
+        <div class="small-container">
+            <div class="row row-2">
+                <h2>Related Products</h2>
+                <p>View More</p>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-----------products--------------->
+
+        <div class="small-container">
+            <div class="row">
+                <div class="col-4">
+                    <a href="https://www.amazon.in/s?k=laptops&ref=nb_sb_noss_2">
+                    <img src="images/laptop_1_1.jpg"> 
+                    <h4>Hp laptop-15(2018)</h4></a>
+                    <p>Rs. 35000</p>
+                </div>
+                <div class="col-4">
+                    <a href="https://www.amazon.in/s?k=IQOO-5+Gaming-+Edition&ref=nb_sb_noss">
+                    <img src="images/mobile_1_1.jpg">
+                    <h4>IQOO-5 Gaming- Edition</h4></a>
+                    <p>Rs. 30000</p>
+                </div>
+                <div class="col-4">
+                    <a href="https://www.amazon.in/s?k=Hifi-Speakers&ref=nb_sb_noss">
+                    <img src="images/speaker_1_1.jpg">
+                    <h4>Hifi-Speakers</h4></a>
+                    <p>Rs. 5000</p>
+                </div>
+                <div class="col-4">
+                    <a href="https://www.amazon.in/s?k=LG+Xnote+A310&ref=nb_sb_noss_2">
+                    <img src="images/laptop_2_1.jpg">
+                    <h4>LG Xnote A310</h4></a>
+                    <p>Rs. 50000</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!----------footer-------->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download Our app</h3>
+                        <p>Download our app for android and ios mobile</p>
+                        <div class="app-logo">
+                            <img src="images/play-store.png">
+                            <img src="images/app-store.png">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="images/r1.jpg">
+                        <p>Our purpose is to sustainability make the pleasure and benefits of technologies</p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li>coupons</li>
+                            <li>Blog Posts</li>
+                            <li>Return policy</li>
+                            <li>join affiliate</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="footer-col-4">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>instagram</li>
+                            <li>You Tube</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!----------j script for toggle menu-------->
+        <script>
+            var menuitems = document.getElementById("menuitems");
+            menuitems.style.maxHeight = "0px";
+
+            function menutoggle()
+            {
+                if(menuitems.style.maxHeight == "0px")
+                {
+                    menuitems.style.maxHeight = "200px";
+                }
+                else
+                {
+                    menuitems.style.maxHeight = "0px";
+                }
+            }
+        </script>
+
+        <!---------js for product gallery-------->
+        <script>
+            var productimg =document.getElementById("productimg");
+            var smallimg =document.getElementsByClassName("small-img");
+
+            smallimg[0].onclick =function(){
+                productimg.src=smallimg[0].src;
+            }
+            smallimg[1].onclick =function(){
+                productimg.src=smallimg[1].src;
+            }
+            smallimg[2].onclick =function(){
+                productimg.src=smallimg[2].src;
+            }
+            smallimg[3].onclick =function(){
+                productimg.src=smallimg[3].src;
+            }
+        </script>
+
+
+
+    </body>
+</html>
